@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ceTe.DynamicPDF.Converter.NET" Version="3.0.0-beta" />
+    <PackageReference Include="ceTe.DynamicPDF.Converter.NET" Version="3.*" />
   </ItemGroup>
 
 </Project>
