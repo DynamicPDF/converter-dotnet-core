@@ -7,23 +7,23 @@ namespace converter_dotnet_core_console_cs
     {
         static void Main(string[] args)
         {
-            //ConvertAsyncExample.RunText("ConvertAsyncText.pdf").Wait();
-            //ConvertAsyncExample.RunHtml("ConvertAsyncHtml.pdf").Wait();
+            ConvertAsyncExample.RunText("ConvertAsyncText.pdf").Wait();
+            ConvertAsyncExample.RunHtml("ConvertAsyncHtml.pdf").Wait();
 
-            //HtmlFileConversion.Run(@"HtmlFileConversion.pdf");
-            //MhtmlFileConversion.Run(@"MhtmlFileConversion.pdf");
+            HtmlFileConversion.Run(@"HtmlFileConversion.pdf");
+            MhtmlFileConversion.Run(@"MhtmlFileConversion.pdf");
             TextFileConversion.Run(@"TextConversion.pdf");
-            //XmlFileConversion.Run(@"XmlConversion.pdf");
+            XmlFileConversion.Run(@"XmlConversion.pdf");
 
-            //GifImageConversion.Run(@"GifImageConversion.pdf");
-            //JpegImageConversion.Run(@"JpegImageConversion.pdf");
-            //JpgImageConversion.Run(@"JpgImageConversion.pdf");
-            //PngImageConversion.Run(@"PngImageConversion.pdf");
-            //TiffImageConversion.Run(@"TiffImageConversion.pdf");
+            GifImageConversion.Run(@"GifImageConversion.pdf");
+            JpegImageConversion.Run(@"JpegImageConversion.pdf");
+            JpgImageConversion.Run(@"JpgImageConversion.pdf");
+            PngImageConversion.Run(@"PngImageConversion.pdf");
+            TiffImageConversion.Run(@"TiffImageConversion.pdf");
 
-            //ExcelFileConversion.Run(@"ExcelFileConversion.pdf");
-            //DocFileConversion.Run(@"DocFileConversion.pdf");
-            //PptFileConversion.Run(@"PptFileConversion.pdf");
+            ExcelFileConversion.Run(@"ExcelFileConversion.pdf");
+            DocFileConversion.Run(@"DocFileConversion.pdf");
+            PptFileConversion.Run(@"PptFileConversion.pdf");
         }
 
         public static string GetResourcePath(string inputFileName)
