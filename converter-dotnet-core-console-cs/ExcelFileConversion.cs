@@ -9,6 +9,8 @@ namespace converter_dotnet_core_console_cs
     {
         public static void Run(string outputPdf)
         {
+            Converter.Convert(Program.GetResourcePath(@"DocumentA.xlsx"), Program.GetOutputDocPath(outputPdf));
+
             ExcelConversionOptions options = new ExcelConversionOptions(false);
 
             ExcelConverter excelConverter = new ExcelConverter(Program.GetResourcePath(@"DocumentA.xlsx"), options);
