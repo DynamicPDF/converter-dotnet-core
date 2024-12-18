@@ -5,6 +5,7 @@ Imports System.Text.RegularExpressions
 Module Program
     Sub Main(args As String())
 
+        WordFileConversion.Run()
         ConverterAsyncExample.RunTextAsync("ConverterAsyncText.pdf").Wait()
         ConverterAsyncExample.RunHtmlAsync("ConverterAsyncHtml.pdf").Wait()
 

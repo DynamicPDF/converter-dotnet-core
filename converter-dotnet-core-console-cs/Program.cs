@@ -7,8 +7,8 @@ namespace converter_dotnet_core_console_cs
     {
         static void Main(string[] args)
         {
-            WordFileConversion.Run("word-sample.pdf");
-            /*
+            WordFileConversion.Run();
+            
             ConvertAsyncExample.RunText("ConvertAsyncText.pdf").Wait();
             ConvertAsyncExample.RunHtml("ConvertAsyncHtml.pdf").Wait();
            
@@ -26,7 +26,6 @@ namespace converter_dotnet_core_console_cs
             ExcelFileConversion.Run(@"ExcelFileConversion.pdf");
             DocFileConversion.Run(@"DocFileConversion.pdf");
             PptFileConversion.Run(@"PptFileConversion.pdf");
-            */
         }
 
         public static string GetResourcePath(string inputFileName)

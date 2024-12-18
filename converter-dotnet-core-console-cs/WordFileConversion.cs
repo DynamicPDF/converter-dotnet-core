@@ -4,7 +4,7 @@ namespace converter_dotnet_core_console_cs
 {
     class WordFileConversion
     {
-        public static void Run(string outputPath)
+        public static void Run()
         {
             WordConversionOptions options = new WordConversionOptions(false);
             options.Author = "John Doe";
