@@ -2,9 +2,22 @@
 
 namespace converter_dotnet_core_console_cs
 {
-    class WordFileConversion
+    public class WordFileConversion
     {
         public static void Run()
+        {
+            SimpleWordConversion(@"word-simple-conversion-output.pdf");
+            ConversionOptionsExample(@"word-conversion-options-output.pdf");
+            ConvertBookmarks(@"word-bookmarks-output.pdf");
+        }
+
+        public static void SimpleWordConversion(string outputPdf)
+        {
+            WordConverter wordDocConverter = new WordConverter(Program.GetResourcePath(@"sample.doc"));
+            wordDocConverter.Convert(Program.GetOutputDocPath(outputPdf));
+        }
+
+        public static void ConversionOptionsExample(string outputPdf)
         {
             WordConversionOptions options = new WordConversionOptions(false);
             options.Author = "John Doe";
@@ -13,7 +26,16 @@ namespace converter_dotnet_core_console_cs
             options.LeftMargin = 72;
             options.RightMargin = 72;
             WordConverter wordDocConverter = new WordConverter(Program.GetResourcePath(@"sample.doc"), options);
-            wordDocConverter.Convert(Program.GetOutputDocPath("sample.pdf"));
+            wordDocConverter.Convert(Program.GetOutputDocPath(outputPdf));
         }
+
+        public static void ConvertBookmarks(string outputPdf)
+        {
+            WordConversionOptions conversionOptions = new(false);
+            conversionOptions.BookmarksType = WordBookmarksType.Headings;
+            WordConverter converter = new(Program.GetResourcePath(@"sample.doc"), conversionOptions);
+            converter.Convert(Program.GetOutputDocPath(outputPdf));
+        }
+
     }
 }
