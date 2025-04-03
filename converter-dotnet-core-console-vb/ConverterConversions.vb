@@ -6,6 +6,7 @@ Class ConverterConversions
         SimpleHtml("simple-html-output.pdf")
         SimpleText("simple-text-output.pdf")
         SimpleWord("simple-word-output.pdf")
+        SimpleConversionOptions("simple-conversion-options-output.pdf")
     End Sub
 
     Public Shared Sub SimpleImage(ByVal outputPdf As String)
@@ -28,4 +29,10 @@ Class ConverterConversions
         Dim options As New ConversionOptions(PageSize.Legal, PageOrientation.Portrait, 50)
         Converter.Convert(Program.GetResourcePath("DocumentA.txt"), Program.GetOutputDocPath(outputPdf), options)
     End Sub
+
+    Public Shared Sub SimpleConversionOptions(ByVal outputPdf As String)
+        Dim options As New ConversionOptions(720, 720, 72, True)
+        Converter.Convert(Program.GetResourcePath("DocumentA.doc"), Program.GetOutputDocPath(outputPdf), options)
+    End Sub
+
 End Class
