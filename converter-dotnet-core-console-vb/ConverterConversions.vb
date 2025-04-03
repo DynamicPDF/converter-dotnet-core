@@ -35,4 +35,10 @@ Class ConverterConversions
         Converter.Convert(Program.GetResourcePath("DocumentA.doc"), Program.GetOutputDocPath(outputPdf), options)
     End Sub
 
+    Public Shared Sub SimpleImageConversion(ByVal outputPdf As String)
+        Dim options As New ImageConversionOptions(PageSize.Legal, PageOrientation.Portrait, 50)
+        Converter.Convert(Program.GetResourcePath("DocumentA.png"), Program.GetOutputDocPath(outputPdf), options)
+    End Sub
+
+
 End Class

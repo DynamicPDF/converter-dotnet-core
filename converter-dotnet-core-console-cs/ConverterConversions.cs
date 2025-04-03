@@ -11,6 +11,7 @@ namespace converter_dotnet_core_console_cs
             SimpleText(@"simple-text-output.pdf");
             SimpleText(@"simple-word-output.pdf");
             SimpleConversionOptions(@"simple-conversion-options-output.pdf");
+            SimpleImageConversion(@"simple-image-conversion-output.pdf");
         }
 
         public static void SimpleImage(string outputPdf)
@@ -43,6 +44,12 @@ namespace converter_dotnet_core_console_cs
         {
             ConversionOptions options = new ConversionOptions(720, 720, 72, true);
             Converter.Convert(Program.GetResourcePath(@"DocumentA.doc"), outputPdf, options);
+        }
+
+        public static void SimpleImageConversion(string outputPdf)
+        {
+            ImageConversionOptions options = new ImageConversionOptions(PageSize.Legal, PageOrientation.Portrait, 50);
+            Converter.Convert(Program.GetResourcePath(@"DocumentA.png"), Program.GetOutputDocPath(outputPdf), options);
         }
     }
 }
