@@ -1,7 +1,5 @@
 ﻿using ceTe.DynamicPDF.Conversion;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace converter_dotnet_core_console_cs
 {

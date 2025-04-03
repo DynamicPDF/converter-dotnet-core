@@ -4,6 +4,8 @@ Imports System.Text.RegularExpressions
 
 Module Program
     Sub Main(args As String())
+        ConverterConversions.Convert()
+        HtmlConversion.Run()
 
         WordFileConversion.Run()
         ConverterAsyncExample.RunTextAsync("ConverterAsyncText.pdf").Wait()

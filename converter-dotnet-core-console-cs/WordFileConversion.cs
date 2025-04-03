@@ -4,7 +4,7 @@ namespace converter_dotnet_core_console_cs
 {
     public class WordFileConversion
     {
-        public static void Run(string outputPdf)
+        public static void Run()
         {
             SimpleWordConversion(@"word-simple-conversion-output.pdf");
             ConversionOptionsExample(@"word-conversion-options-output.pdf");
