@@ -22,7 +22,7 @@ Module Program
         PngImageConversion.Run("PngImageConversion.pdf")
         TiffImageConversion.Run("TiffImageConversion.pdf")
 
-        ExcelFileConversion.Run("ExcelFileConversion.pdf")
+        ExcelFileConversion.Run()
         DocFileConversion.Run("DocFileConversion.pdf")
         PptFileConversion.Run("PptFileConversion.pdf")
     End Sub
