@@ -24,7 +24,7 @@ Module Program
 
         ExcelFileConversion.Run()
         DocFileConversion.Run("DocFileConversion.pdf")
-        PptFileConversion.Run("PptFileConversion.pdf")
+        PptFileConversion.Run()
     End Sub
 
     Public Function GetResourcePath(inputFileName As String) As String
