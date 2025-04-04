@@ -20,7 +20,7 @@ Module Program
         JpegImageConversion.Run("JpegImageConversion.pdf")
         JpgImageConversion.Run("JpgImageConversion.pdf")
         PngImageConversion.Run("PngImageConversion.pdf")
-        TiffImageConversion.Run("TiffImageConversion.pdf")
+        TiffImageConversion.Run()
 
         ExcelFileConversion.Run()
         DocFileConversion.Run("DocFileConversion.pdf")
