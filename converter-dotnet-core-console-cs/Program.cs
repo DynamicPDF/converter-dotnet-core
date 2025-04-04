@@ -7,9 +7,13 @@ namespace converter_dotnet_core_console_cs
     {
         static void Main(string[] args)
         {
+            PptFileConversion.Run();
+            /*
+             *             ExcelFileConversion.Run();
+
             LoggingExample.LogConfiguration();
             ConverterConversions.Convert();
-            PptFileConversion.Run(@"PptFileConversion.pdf");
+            PptFileConversion.Run();
             HtmlConversion.Run();
             TextRtfConversion.Run();
             WordFileConversion.Run();
@@ -31,6 +35,7 @@ namespace converter_dotnet_core_console_cs
 
             ExcelFileConversion.Run(@"ExcelFileConversion.pdf");
             PptFileConversion.Run(@"PptFileConversion.pdf");
+            */
 
         }
 
