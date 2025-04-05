@@ -6,7 +6,7 @@ Module Program
     Sub Main(args As String())
         ConverterConversions.Convert()
         HtmlConversion.Run()
-
+        TextRtfConversion.Run()
         WordFileConversion.Run()
         ConverterAsyncExample.RunTextAsync("ConverterAsyncText.pdf").Wait()
         ConverterAsyncExample.RunHtmlAsync("ConverterAsyncHtml.pdf").Wait()
