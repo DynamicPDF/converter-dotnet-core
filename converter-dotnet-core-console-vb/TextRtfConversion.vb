@@ -1,4 +1,5 @@
-﻿Imports ceTe.DynamicPDF.Conversion
+﻿Imports System.IO
+Imports ceTe.DynamicPDF.Conversion
 
 Public Class TextRtfConversion
     Public Shared Sub Run()
