@@ -10,4 +10,8 @@
     <PackageReference Include="ceTe.DynamicPDF.Converter.NET" Version="3.27.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="OutputFiles\" />
+  </ItemGroup>
+
 </Project>

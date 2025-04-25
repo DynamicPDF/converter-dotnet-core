@@ -9,55 +9,63 @@ namespace converter_dotnet_core_console_cs
     {
         public static void Run()
         {
-           RunTextBytes(@"async-text-bytes-output.pdf").Wait();
-           RunTextSaveFile(@"async-text-file-output.pdf").Wait();
-           RunTextInputFileName(@"async-text-input-file-name-output.pdf").Wait();
+          
+           var tsk1 = RunTextSaveFile(@"async-text-file-output.pdf");
+           var tsk2 = RunTextInputFileName(@"async-text-input-file-name-output.pdf");
+           var tsk3 = RunTextBytesConvOpt(@"async-text-bytes-options-output.pdf");
+           var tsk4 = RunTextBytesConvAppnd(@"async-text-bytes-append-output.pdf");
+           Task.WaitAll(new Task[] {tsk2, tsk1, tsk3, tsk4});
+           Console.WriteLine("Conversion Completed successfully");
         }
-
 
         public static async Task RunTextInputFileName(string outputPdf)
         {
-                      
             byte[] input = File.ReadAllBytes(Program.GetResourcePath(@"DocumentA.txt"));
-
-            //public static Task<Byte[]> ConvertAsync(Byte[] inputData, string inputFileName)
-
             byte[] result = await Converter.ConvertAsync(input,Program.GetResourcePath(@"DocumentA.txt"));
 
             if (result != null)
             {
-                File.WriteAllBytes(outputPdf, result);
+               File.WriteAllBytes(Program.GetOutputDocPath(outputPdf), result);
             }
 
         }
 
-
-
-        public static async Task RunTextBytes(string outputPdf)
+        public static async Task RunTextBytesConvOpt(string outputPdf)
         {
+            ConversionOptions options = new(false);
+            byte[] result = await Converter.ConvertAsync(Program.GetResourcePath(@"DocumentA.txt"), options);
 
-            //public static Task<Byte[]> ConvertAsync(string inputFilePath)
-            
-            byte[] result = await Converter.ConvertAsync(Program.GetResourcePath(@"DocumentA.txt"));
-                       
             if (result != null)
             {
-                File.WriteAllBytes(outputPdf, result);
-            }
+                File.WriteAllBytes(Program.GetOutputDocPath(outputPdf), result);
 
+            }
         }
+
+
+        public static async Task RunTextBytesConvAppnd(string outputPdf)
+        {
+            ConversionOptions options = new(false);
+            byte[] appendToPdf = File.ReadAllBytes(Program.GetResourcePath(@"DocumentA.pdf"));
+
+            byte[] result = await Converter.ConvertAsync(Program.GetResourcePath(@"DocumentA.txt"), options, appendToPdf);
+
+            if (result != null)
+            {
+                File.WriteAllBytes(Program.GetOutputDocPath(outputPdf), result);
+
+            }
+        }
+
 
         public static async Task RunTextSaveFile(string outputPdf)
         {
-            //works - produces file as expected
-            //public static Task<bool> ConvertAsync(string sourceFilePath, string outputFilePath)
 
-            bool result = await Converter.ConvertAsync(Program.GetResourcePath(@"DocumentA.txt"), Program.GetOutputDocPath(outputPdf));
+            bool result = await Converter.ConvertAsync(Program.GetResourcePath(@"DocumentA.rtf"), Program.GetOutputDocPath(outputPdf));
 
             if (result)
             {
                 Console.WriteLine("Conversion Completed successfully");
-
             }
         }
 
