@@ -1,43 +1,31 @@
 ﻿using System.IO;
 using System.Text.RegularExpressions;
 
+
 namespace converter_dotnet_core_console_cs
 {
     class Program
     {
         static void Main(string[] args)
         {
-            PptFileConversion.Run();
-            /*
-             *             ExcelFileConversion.Run();
-
-            LoggingExample.LogConfiguration();
             ConverterConversions.Convert();
-            PptFileConversion.Run();
-            HtmlConversion.Run();
-            TextRtfConversion.Run();
-            WordFileConversion.Run();
-            OtherConversions.Run();
-            TiffImageConversion.Run();
-            WordFileConversion.Run();
-
-            ConvertAsyncExample.RunText("ConvertAsyncText.pdf").Wait();
-            ConvertAsyncExample.RunHtml("ConvertAsyncHtml.pdf").Wait();
-
-            MhtmlFileConversion.Run(@"MhtmlFileConversion.pdf");
-            XmlFileConversion.Run(@"XmlConversion.pdf");
-
+            ConvertAsyncExample.Run();
+            EventHandlingConversion.Run();
+            ExcelFileConversion.Run();
             GifImageConversion.Run(@"GifImageConversion.pdf");
-            JpegImageConversion.Run(@"JpegImageConversion.pdf");
+            HtmlConversion.Run();
             JpgImageConversion.Run(@"JpgImageConversion.pdf");
+            LoggingExample.LogConfiguration();
+            MhtmlFileConversion.Run(@"MhtmlFileConversion.pdf");
+            OtherConversions.Run();
             PngImageConversion.Run(@"PngImageConversion.pdf");
+            PptFileConversion.Run();
+            TextRtfConversion.Run();
             TiffImageConversion.Run();
-
-            ExcelFileConversion.Run(@"ExcelFileConversion.pdf");
-            PptFileConversion.Run(@"PptFileConversion.pdf");
-            */
-
+            WordFileConversion.Run();
+            XmlFileConversion.Run(@"XmlConversion.pdf");
         }
+
 
         public static string GetResourcePath(string inputFileName)
         {

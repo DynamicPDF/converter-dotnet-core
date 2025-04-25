@@ -5,23 +5,23 @@ Imports System.Text.RegularExpressions
 Module Program
     Sub Main(args As String())
         ConverterConversions.Convert()
+
         HtmlConversion.Run()
+        HtmlFileConversion.Run("HtmlConversion.pdf")
         TextRtfConversion.Run()
         WordFileConversion.Run()
+        ConvertAsyncExample.Run()
         ConverterAsyncExample.RunTextAsync("ConverterAsyncText.pdf").Wait()
         ConverterAsyncExample.RunHtmlAsync("ConverterAsyncHtml.pdf").Wait()
-
-        HtmlFileConversion.Run("HtmlConversion.pdf")
+        EventHandlingConversion.Run()
         MhtmlFileConversion.Run("MhtmlConversion.pdf")
         TextFileConversion.Run("TextConversion.pdf")
         XmlFileConversion.Run("XmlConversion.pdf")
-
         GifImageConversion.Run("GifImageConversion.pdf")
         JpegImageConversion.Run("JpegImageConversion.pdf")
         JpgImageConversion.Run("JpgImageConversion.pdf")
         PngImageConversion.Run("PngImageConversion.pdf")
         TiffImageConversion.Run()
-
         ExcelFileConversion.Run()
         DocFileConversion.Run("DocFileConversion.pdf")
         PptFileConversion.Run()
