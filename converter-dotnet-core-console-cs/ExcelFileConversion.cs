@@ -7,8 +7,14 @@ namespace converter_dotnet_core_console_cs
     {
         public static void Run()
         {
+            ExcelFileConversion.SimpleConvert(@"excel-simple-convert-output.pdf");
             ConvertExcel(@"excel-convert-output.pdf");
             ConvertExcelOptions(@"excel-convert-options-output.pdf");
+        }
+
+        public static void SimpleConvert(string outputPdf)
+        {
+            Converter.Convert(Program.GetResourcePath(@"DocumentA.xlsx"), Program.GetOutputDocPath(outputPdf));
         }
 
         public static void ConvertExcel(string outputPdf)

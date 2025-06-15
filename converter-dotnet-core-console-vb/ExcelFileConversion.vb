@@ -3,8 +3,13 @@
 Public Class ExcelFileConversion
 
     Public Shared Sub Run()
+        SimpleConvert("excel-simple-convert-output.pdf")
         ConvertExcel("excel-convert-output.pdf")
         ConvertExcelOptions("excel-convert-options-output.pdf")
+    End Sub
+
+    Public Shared Sub SimpleConvert(outputPdf As String)
+        Converter.Convert(Program.GetResourcePath(@"DocumentA.xlsx"), Program.GetOutputDocPath(outputPdf))
     End Sub
 
     Public Shared Sub ConvertExcel(outputPdf As String)
