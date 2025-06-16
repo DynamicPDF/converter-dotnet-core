@@ -7,11 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ceTe.DynamicPDF.Converter.NET" Version="3.27.0" />
+    <None Remove="ceTeLicenseKeys.csl4" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="OutputFiles\" />
+    <EmbeddedResource Include="ceTeLicenseKeys.csl4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ceTe.DynamicPDF.Converter.NET" Version="3.27.0" />
   </ItemGroup>
 
 </Project>

@@ -9,7 +9,7 @@ namespace converter_dotnet_core_console_cs
         static void Main(string[] args)
         {
             SimpleConversionConverter.Run();
-       /*     ConverterConversions.Convert();
+            ConverterConversions.Convert();
             ConvertAsyncExample.Run();
             EventHandlingConversion.Run();
             ExcelFileConversion.Run();
@@ -24,7 +24,7 @@ namespace converter_dotnet_core_console_cs
             TextRtfConversion.Run();
             TiffImageConversion.Run();
             WordFileConversion.Run();
-            XmlFileConversion.Run(@"XmlConversion.pdf"); */
+            XmlFileConversion.Run(@"XmlConversion.pdf"); 
         }
 
 

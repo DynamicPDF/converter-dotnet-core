@@ -9,7 +9,7 @@ Public Class ExcelFileConversion
     End Sub
 
     Public Shared Sub SimpleConvert(outputPdf As String)
-        Converter.Convert(Program.GetResourcePath(@"DocumentA.xlsx"), Program.GetOutputDocPath(outputPdf))
+        Converter.Convert(Program.GetResourcePath("DocumentA.xlsx"), Program.GetOutputDocPath(outputPdf))
     End Sub
 
     Public Shared Sub ConvertExcel(outputPdf As String)

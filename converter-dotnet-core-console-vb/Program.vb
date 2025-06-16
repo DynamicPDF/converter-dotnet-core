@@ -4,8 +4,8 @@ Imports System.Text.RegularExpressions
 
 Module Program
     Sub Main(args As String())
+        SimpleConversionConverter.Run()
         ConverterConversions.Convert()
-
         HtmlConversion.Run()
         HtmlFileConversion.Run("HtmlConversion.pdf")
         TextRtfConversion.Run()
