@@ -1,4 +1,4 @@
-![DynamicPDF Core Suite for .NET examples in C# and VB.NET](./logo-small.png)
+![DynamicPDF Converter for .NET examples in C# and VB.NET](./logo-small.png)
 
 This project contains the DynamicPDF Converter for .NET C# console examples and VB.NET console examples from the [DynamicPDF Converter for .NET Documentation](https://www.dynamicpdf.com/docs/dotnet/converter-welcome).
 
