@@ -43,7 +43,7 @@ namespace converter_dotnet_core_console_cs
         public static void SimpleConversionOptions(string outputPdf)
         {
             ConversionOptions options = new ConversionOptions(720, 720, 72, true);
-            Converter.Convert(Program.GetResourcePath(@"DocumentA.doc"), outputPdf, options);
+            Converter.Convert(Program.GetResourcePath(@"DocumentA.doc"), Program.GetOutputDocPath(outputPdf), options);
         }
 
         public static void SimpleImageConversion(string outputPdf)

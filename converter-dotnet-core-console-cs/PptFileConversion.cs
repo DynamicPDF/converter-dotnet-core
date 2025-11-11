@@ -32,7 +32,7 @@ namespace converter_dotnet_core_console_cs
             powerPointConversionOptions.OutputType = handout;
             powerPointConversionOptions.OutputType.PrintHiddenSlide = true;
             PowerPointConverter powerPointConverter1 = new PowerPointConverter(Program.GetResourcePath(@"DocumentA.pptx"), powerPointConversionOptions);
-            powerPointConverter1.Convert(outputPdf);
+            powerPointConverter1.Convert(Program.GetOutputDocPath(outputPdf));
         }
     }
 }

@@ -28,7 +28,7 @@ Public Class PptFileConversion
         powerPointConversionOptions.OutputType.PrintHiddenSlide = True
 
         Dim powerPointConverter1 As New PowerPointConverter(Program.GetResourcePath("DocumentA.pptx"), powerPointConversionOptions)
-        powerPointConverter1.Convert(outputPdf)
+        powerPointConverter1.Convert(Program.GetOutputDocPath(outputPdf))
     End Sub
 End Class
 
